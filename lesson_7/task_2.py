@@ -5,16 +5,13 @@
 #  Make the function print out the values of the dictionary
 #  to make sure that it works as intended.
 
-def make_country(country_name, capital):
-    print(dict(country_name=capital))
+info_capitals_of_country = {}
 
 
-make_country('Ukraine', 'Kiev')
+def make_country(country_name, capital, dict_func=info_capitals_of_country):
+    dict_func[country_name] = capital
+    return dict_func
 
 
-# **kwargs
-def make_country_1(country_name_1, **kwargs):
-    print(country_name_1, kwargs)
-
-
-make_country_1('Ukraine', capital='Kiev', population=2967360, river='Dnepr')
+print(make_country('Ukraine', 'Kiev'))
+print(make_country('France', 'Paris'))
