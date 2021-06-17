@@ -1,0 +1,1 @@
+Error_ 1 --> Check user input. Error_ 2 --> Check if the string is correct. 
